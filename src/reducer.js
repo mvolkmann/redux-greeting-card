@@ -1,8 +1,8 @@
 // Action type constants
-export const SET_MESSAGE = 'SET_MESSAGE';
-export const SET_NAME = 'SET_NAME';
-export const SET_OCCASION = 'SET_OCCASION';
-export const SET_SHOW = 'SET_SHOW';
+const SET_MESSAGE = 'SET_MESSAGE';
+const SET_NAME = 'SET_NAME';
+const SET_OCCASION = 'SET_OCCASION';
+const SET_SHOW = 'SET_SHOW';
 
 const initialState = {
   occasion: 'Birthday',
