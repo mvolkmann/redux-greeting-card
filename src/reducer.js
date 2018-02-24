@@ -3,6 +3,7 @@ const SET_MESSAGE = 'SET_MESSAGE';
 const SET_NAME = 'SET_NAME';
 const SET_OCCASION = 'SET_OCCASION';
 const SET_SHOW = 'SET_SHOW';
+const SHOUT = 'SHOUT';
 
 const initialState = {
   occasion: 'Birthday',
@@ -33,6 +34,10 @@ export const setShow = show => ({
   payload: show
 });
 
+export const shout = () => ({
+  type: SHOUT
+});
+
 export function reducer(state = initialState, action) {
   const {payload, type} = action;
   switch (type) {
@@ -44,6 +49,8 @@ export function reducer(state = initialState, action) {
       return {...state, occasion: payload};
     case SET_SHOW:
       return {...state, show: payload};
+    case SHOUT:
+      return {...state, message: state.message.toUpperCase()};
     default:
       return state;
   }

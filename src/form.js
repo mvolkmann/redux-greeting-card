@@ -4,7 +4,8 @@ import {
   setMessage,
   setName,
   setOccasion,
-  setShow
+  setShow,
+  shout
 } from './reducer';
 import './form.css';
 
@@ -17,7 +18,8 @@ class Form extends Component {
       message,
       name,
       occasion,
-      showCard
+      showCard,
+      shout
     } = this.props;
 
     return (
@@ -37,6 +39,7 @@ class Form extends Component {
         <div className="row">
           <label>Message</label>
           <textarea onChange={handleMessage} value={message} />
+          <button onClick={shout}>Shout</button>
         </div>
         <div className="row">
           <label></label>
@@ -61,6 +64,9 @@ const mapDispatch = dispatch => ({
   },
   showCard() {
     dispatch(setShow('card'))
+  },
+  shout() {
+    dispatch(shout())
   }
 });
 
