@@ -5,13 +5,6 @@ const SET_OCCASION = 'SET_OCCASION';
 const SET_SHOW = 'SET_SHOW';
 const SHOUT = 'SHOUT';
 
-const initialState = {
-  occasion: 'Birthday',
-  name: '',
-  message: '',
-  show: 'form'
-};
-
 // Action creator functions
 
 export const setMessage = event => ({
@@ -38,7 +31,7 @@ export const shout = () => ({
   type: SHOUT
 });
 
-export function reducer(state = initialState, action) {
+export function reducer(state, action) {
   const {payload, type} = action;
   switch (type) {
     case SET_MESSAGE:

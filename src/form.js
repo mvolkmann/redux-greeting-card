@@ -70,9 +70,9 @@ const mapDispatch = dispatch => ({
   }
 });
 
-const mapState = state => {
+function mapState(state) {
   const {message, name, occasion} = state;
   return {message, name, occasion};
-};
+}
 
 export default connect(mapState, mapDispatch)(Form);

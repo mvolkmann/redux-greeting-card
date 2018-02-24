@@ -6,7 +6,18 @@ import './index.css';
 import App from './App';
 import {reducer} from './reducer';
 
-const store = createStore(reducer);
+// Setup for redux-devtools
+const extension = window.__REDUX_DEVTOOLS_EXTENSION__;
+const enhancer = extension && extension();
+
+const initialState = {
+  occasion: 'Birthday',
+  name: '',
+  message: '',
+  show: 'form'
+};
+
+const store = createStore(reducer, initialState, enhancer);
 
 function render() {
   ReactDOM.render(

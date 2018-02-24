@@ -19,7 +19,7 @@ class App extends Component {
   }
 }
 
-const mapState = state => {
+function mapState(state) {
   const {show} = state;
   return {show};
 };
