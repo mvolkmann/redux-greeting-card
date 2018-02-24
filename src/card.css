@@ -1,0 +1,13 @@
+.card button {
+  margin-top: 20px;
+}
+
+.card .greeting {
+  font-family: fantasy;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card img {
+  height: 200px;
+}
