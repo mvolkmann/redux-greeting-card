@@ -19,9 +19,9 @@ class App extends Component {
   }
 }
 
-function mapState(state) {
+function mapStateToProps(state) {
   const {show} = state;
   return {show};
 };
 
-export default connect(mapState)(App);
+export default connect(mapStateToProps)(App);

@@ -40,15 +40,15 @@ class Card extends Component {
 
 // Make this a "connected" component.
 
-const mapDispatch = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   showForm() {
     dispatch(setShow('form'))
   }
 });
 
-function mapState(state) {
+function mapStateToProps(state) {
   const {message, name, occasion} = state;
   return {message, name, occasion};
 }
 
-export default connect(mapState, mapDispatch)(Card);
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

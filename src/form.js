@@ -52,7 +52,7 @@ class Form extends Component {
 
 // Make this a "connected" component.
 
-const mapDispatch = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   handleMessage(event) {
     dispatch(setMessage(event));
   },
@@ -70,9 +70,9 @@ const mapDispatch = dispatch => ({
   }
 });
 
-function mapState(state) {
+function mapStateToProps(state) {
   const {message, name, occasion} = state;
   return {message, name, occasion};
 }
 
-export default connect(mapState, mapDispatch)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
