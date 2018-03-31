@@ -19,13 +19,9 @@ const initialState = {
 
 const store = createStore(reducer, initialState, enhancer);
 
-function render() {
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById('root')
-  );
-}
-
-render();
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
