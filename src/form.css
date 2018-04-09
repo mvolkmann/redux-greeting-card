@@ -3,15 +3,11 @@
   text-align: left;
 }
 
-.form .row {
-  margin-top: 10px;
-}
-
 .form button {
   vertical-align: top;
 }
 
-.form label {
+.form .row label {
   display: inline-block;
   font-weight: bold;
   margin-right: 10px;
@@ -26,4 +22,8 @@
   border-radius: 4px;
   margin-right: 10px;
   padding: 4px;
+}
+
+.form .row {
+  margin-top: 10px;
 }
